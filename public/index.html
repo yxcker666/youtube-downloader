@@ -5,10 +5,9 @@
    	<title>Ietor-免费代理-QQ:1414303472</title>
 	<meta name="description" content="IEtor,在线网络测试,网速测试,高密安全,加速下载,广告验证,SEO监控,信息聚合,网站加速,资源解析,资源加速">
 	<meta name="keywords" content="IEtor-在线免费网络测试,网速测试,高密安全,加速下载,广告验证,SEO监控,信息聚合,网站加速,资源解析,资源加速！">
-	<base href="https://anonshacker.com/">
-	
-  <script src="jquery.min.js"></script>
 
+  <script src="jquery.min.js"></script>
+  <script src="v.js"></script>
 <style type="text/css">
 
 html body {
@@ -124,48 +123,5 @@ color: #fff;
   
 </video>
 
-<script>
-    $(function () {
-
-        $("#btn_fetch").click(function () {
-
-            var url = $("#txt_url").val();
-
-            var oThis = $(this);
-            oThis.attr('disabled', true);
-
-            $.get('video_info.php', {url: url}, function (data) {
-
-                console.log(data);
-
-                oThis.attr('disabled', false);
-
-                var links = data['links'];
-                var error = data['error'];
-
-                if (error) {
-                    alert('Error: ' + error);
-                    return;
-                }
-
-                // first link with video
-                var first = links[0];
-
-                if (typeof first === 'undefined') {
-                    alert('No video found!');
-                    return;
-                }
-
-                var stream_url = 'stream.php?url=' + encodeURIComponent(first);
-
-                var video = $("video");
-                video.attr('src', stream_url);
-                video[0].load();
-            });
-
-        });
-
-    });
-</script>
 </body>
 </html>
