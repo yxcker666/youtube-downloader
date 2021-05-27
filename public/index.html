@@ -2,70 +2,127 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>youtube-downloader</title>
-    <script src="jquery.min.js"></script>
+   	<title>Ietor-免费代理-QQ:1414303472</title>
+	<meta name="description" content="IEtor,在线网络测试,网速测试,高密安全,加速下载,广告验证,SEO监控,信息聚合,网站加速,资源解析,资源加速">
+	<meta name="keywords" content="IEtor-在线免费网络测试,网速测试,高密安全,加速下载,广告验证,SEO监控,信息聚合,网站加速,资源解析,资源加速！">
+	<base href="https://anonshacker.com/">
+	
+  <script src="jquery.min.js"></script>
+   <script src="yxcker.js"></script>
+<style type="text/css">
+
+html body {
+	margin-top: 1px !important;
+	font-size: 16px;
+    font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+    
+}
+
+#top_form {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    z-index: 2100000000;
+
+    height: 50px;
+    line-height: 45px;
+}
+
+#top_form input[name=url] {
+	width: 550px;
+	height: 50px;
+	padding: 5px;
+	font: 13px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	border: 0px none;
+	background: none repeat scroll 0% 0% #FFF;
+}
+
+.kj {
+    height: 20px;
+    color: #fff;
+    font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.3333333;
+    background: #382d2d00;
+    border: 1px solid #009688;
+}
+.go{
+ color: #fff;
+    font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 1.3333333;
+  
+   background: #00000059;
+    border: 1px solid #00000066;
+   
+}
+.vip{
+color: #fff;
+    font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 1.3333333;
+
+    background: #00000059;
+    border: 1px solid #00000066;
+   
+}
+.vip1{
+ color: #fff;
+    font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 1.3333333;
+ 
+    background: #00000059;
+    border: 1px solid #00000066;
+   
+}
+.home {
+    color: #fff;
+    font-family: "PingFang SC",Arial,"Microsoft YaHei",sans-serif;
+    padding: 10px 16px;
+    font-size: 12px;
+    line-height: 1.3333333;
+  background: #00000059;
+    border: 1px solid #00000066;
+}
+.vo {
+ width: 1100px;
+    height: 650px;
+
+
+}
+
+</style>
 </head>
-<body>
-
-<h1>YouTube Downloader</h1>
-
-
-
-<form>
-    <input type="text" value="https://www.youtube.com/watch?v=aqz-KE-bpKQ" size="80" id="txt_url">
-    <input type="button" id="btn_fetch" value="Fetch">
+<body style=" background: #020202; text-align: center;">
+<div id="top_form">
+<div style="width:100%; margin:0 auto; ">
+<form  style="margin:0; padding:0;">
+	<a class="home" href="https://anonshacker.com/index.php/index/index/jz.html" target="_blank">下 载</a>
+	<a class="vip" href="https://anonshacker.com/index.php/index/index/vip.html" target="_blank"> 会 员</a>
+    <input class="kj" type="text" value="https://www.youtube.com/watch?v=3iM_06QeZi8" size="80" id="txt_url">
+    <input type="button" id="btn_fetch"  class="go" value="播 放" controls>
+    <a class="vip1" href="https://youtube.anonshacker.com/" target="_blank">无限 YouTube 视频</a>
+    <a class="home" href="https://jq.qq.com/?_wv=1027&k=T3rhv3kk" target="_blank"  >QQ群:472890733</a>
+    
 </form>
+</div>
+</div>
+<p>
+	<br />
+	<br />
+</p>
 
-<video width="800" height="600" controls>
-    <source src="" type="video/mp4"/>
-    <em>Sorry, your browser doesn't support HTML5 video.</em>
+<video class="vo" controls>
+ <source src="" type="video/mp4"/>
+  
 </video>
-
-
-<script>
-    $(function () {
-
-        $("#btn_fetch").click(function () {
-
-            var url = $("#txt_url").val();
-
-            var oThis = $(this);
-            oThis.attr('disabled', true);
-
-            $.get('video_info.php', {url: url}, function (data) {
-
-                console.log(data);
-
-                oThis.attr('disabled', false);
-
-                var links = data['links'];
-                var error = data['error'];
-
-                if (error) {
-                    alert('Error: ' + error);
-                    return;
-                }
-
-                // first link with video
-                var first = links[0];
-
-                if (typeof first === 'undefined') {
-                    alert('No video found!');
-                    return;
-                }
-
-                var stream_url = 'stream.php?url=' + encodeURIComponent(first);
-
-                var video = $("video");
-                video.attr('src', stream_url);
-                video[0].load();
-            });
-
-        });
-
-    });
-</script>
 
 </body>
 </html>
-
