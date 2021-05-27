@@ -1,4 +1,5 @@
 
+<script>
     $(function () {
 
         $("#btn_fetch").click(function () {
@@ -23,16 +24,14 @@
                 }
 
                 // first link with video
-                var first = links.find(function (link) {
-                    return link['format'].indexOf('video') !== -1;
-                });
+                var first = links[0];
 
                 if (typeof first === 'undefined') {
                     alert('No video found!');
                     return;
                 }
 
-                var stream_url = 'stream.php?url=' + encodeURIComponent(first['url']);
+                var stream_url = 'stream.php?url=' + encodeURIComponent(first);
 
                 var video = $("video");
                 video.attr('src', stream_url);
@@ -42,3 +41,4 @@
         });
 
     });
+</script>
